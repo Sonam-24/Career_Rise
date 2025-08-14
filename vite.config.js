@@ -10,4 +10,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: "./", // <- This makes paths in dist relative for production
 })
