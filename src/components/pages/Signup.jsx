@@ -40,15 +40,15 @@ const Signup = () => {
             formData.append('phoneNumber', data.phonenumber);
             formData.append('password', data.password);
             formData.append('role', data.role);
-            formData.append('profile', data.profilepicture);
-            if (data.profilepicture[0]) {
-                formData.append('file', data.profilepicture[0]);
+            // formData.append('profile', data.profilepicture);
+            if (data.profilepicture && data.profilepicture[0]) {
+              formData.append("file", data.profilepicture[0]); // ✅ backend expects 'file'
             }
 
             const res = await axios.post(apiUrl, formData, {
-                headers: { 'Content-Type': 'multipart/form-data', },
-                withCredentials: true,
-            })
+              headers: { "Content-Type": "multipart/form-data" },
+              withCredentials: true,
+            });
             toast.success(res.data.message)
             navigate('/login');
         } catch (error) {
