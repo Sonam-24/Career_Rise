@@ -19,7 +19,6 @@ const corsOptions = {
   credentials: true,
 };
 
-// middleware
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
