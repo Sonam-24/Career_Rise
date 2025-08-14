@@ -1,5 +1,5 @@
 import getDataUri from "../utils/datauri.js";
-import { User } from "../models/user.model.js ";
+import { User } from "../models/user.model.js";
 import bcryptjs from "bcryptjs";
 import jwt from "jsonwebtoken";
 import cloudinary from "../utils/cloudinary.js";
